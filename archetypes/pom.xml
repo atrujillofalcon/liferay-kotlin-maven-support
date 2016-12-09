@@ -13,6 +13,12 @@
     <packaging>pom</packaging>
     <name>Liferay Kotlin Maven Archetypes</name>
     <description>Parent project to support Liferay plugins archetypes with Kotlin.</description>
+
+    <properties>
+        <kotlin.version>1.0.5</kotlin.version>
+    </properties>
+
     <modules>
+        <module>liferay-kotlin-portlet-archetype</module>
     </modules>
 </project>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>atrujillo.liferay</groupId>
+        <artifactId>liferay-kotlin-archetypes</artifactId>
+        <version>6.2.10.16</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>atrujillo.liferay.archetypes</groupId>
+    <artifactId>liferay-kotlin-portlet-archetype</artifactId>
+    <packaging>maven-archetype</packaging>
+    <name>Liferay Kotlin Maven Portlet Archetype</name>
+    <description>Provides an archetype to create Liferay portlets with Kotlin.</description>
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>2.2</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <artifactId>maven-archetype-plugin</artifactId>
+                <version>2.2</version>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>generate-test-sources</phase>
+                        <configuration>
+                            <tasks>
+                                <mkdir dir="${project.build.testOutputDirectory}/projects/default/reference/src/main/java"/>
+                                <mkdir dir="${project.build.testOutputDirectory}/projects/default/reference/src/main/resources"/>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

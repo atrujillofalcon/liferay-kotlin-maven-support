@@ -60,7 +60,7 @@
     </build>
     <modules>
         <module>archetypes</module>
-        <module>samples</module>
+        <module>kotlin-plugin-samples</module>
     </modules>
     <reporting>
         <plugins>

@@ -3,9 +3,9 @@ Parent repository to support maven archetype generation of Liferay plugins with 
 
 Kotlin is a new statically-typed programming language developed by Jetbrain that runs on <b>Java Virtual Machine</b>. The main benefits are:
 
-  -Null-safe language.
-  -Any 3rd library type extension.
-  -Concise and simple to write.
+  &nbsp;&nbsp;&nbsp;&nbsp;-Null-safe language.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;-Any 3rd library type extension.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;-Concise and simple to write.
   
 You can view more details in https://kotlinlang.org/ .
 

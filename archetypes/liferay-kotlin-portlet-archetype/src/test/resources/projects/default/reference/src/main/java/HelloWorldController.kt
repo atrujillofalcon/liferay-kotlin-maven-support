@@ -1,4 +1,4 @@
-package $package;
+package com.liferay.mvc.kotlin
 
 
 import javax.portlet.RenderRequest

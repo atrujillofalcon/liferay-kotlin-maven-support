@@ -5,7 +5,7 @@
     <parent>
         <groupId>atrujillo.liferay</groupId>
         <artifactId>liferay-kotlin-archetypes</artifactId>
-        <version>6.2.10.16</version>
+        <version>0.2.5</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -14,6 +14,17 @@
     <packaging>maven-archetype</packaging>
     <name>Liferay Kotlin Maven Portlet Archetype</name>
     <description>Provides an archetype to create Liferay portlets with Kotlin.</description>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-atrujillofalcon-liferay-kotlin-maven-support</id>
+            <name>atrujillofalcon-liferay-kotlin-maven-support</name>
+            <url>
+                https://api.bintray.com/maven/atrujillofalcon/liferay-kotlin-maven-support/liferay-kotlin-portlet-archetype/;publish=1
+            </url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <extensions>
             <extension>

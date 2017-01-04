@@ -7,13 +7,27 @@
     <artifactId>kotlin-maven-support</artifactId>
     <packaging>pom</packaging>
     <name>Liferay Kotlin Maven Support</name>
-    <version>6.2.10.16</version>
+    <version>0.2.5</version>
     <description>Parent project to support Maven Kotlin subprojects.</description>
     <url>http://www.liferay.com</url>
     <scm>
         <connection>scm:git:git@github.com:atrujillofalcon/liferay-kotlin-maven-support.git</connection>
         <url>https://github.com/atrujillofalcon/liferay-kotlin-maven-support</url>
+        <tag>HEAD</tag>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-atrujillofalcon-liferay-kotlin-maven-support</id>
+            <name>atrujillofalcon-liferay-kotlin-maven-support</name>
+            <url>
+                https://api.bintray.com/maven/atrujillofalcon/liferay-kotlin-maven-support/liferay-kotlin-portlet-archetype/;publish=1
+            </url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
+
+
     <build>
         <plugins>
             <plugin>
@@ -56,11 +70,32 @@
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <version>3.0.0</version>
             </plugin>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <modules>
         <module>archetypes</module>
-        <module>kotlin-plugin-samples</module>
+        <!--<module>kotlin-plugin-samples</module>-->
     </modules>
     <reporting>
         <plugins>
@@ -197,5 +232,22 @@
     <properties>
         <maven.version>3.2.5</maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <kotlin.version>1.0.6</kotlin.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test</artifactId>
+            <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
 </project>

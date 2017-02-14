@@ -18,3 +18,4 @@ This is required one time only, after this you can list and use the local archey
 <b>mvn archetype:generate -DarchetypeCatalog=local</b>
 
 
+[![](https://jitpack.io/v/atrujillofalcon/liferay-kotlin-maven-support.svg)](https://jitpack.io/#atrujillofalcon/liferay-kotlin-maven-support)

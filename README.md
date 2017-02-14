@@ -9,9 +9,19 @@ Kotlin is a new statically-typed programming language developed by Jetbrain that
   
 You can view more details in https://kotlinlang.org/ .
 
-For use any of archetypes included here you have to clone the repository in your machine and execute from the repository root folder:
+You have two options to use the archetypes of this repo:
 
-<b>mvn clean install</b>
+&nbsp;&nbsp;&nbsp;&nbsp;1- For use any of archetypes included here you have to clone the repository in your machine and execute from the repository root folder:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>mvn clean install</b>
+
+&nbsp;&nbsp;&nbsp;&nbsp;2- You can install each archetype separately downloading the jar with these commands:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>wget https://github.com/atrujillofalcon/liferay-kotlin-maven-support/releases/download/1.0.0-beta/liferay-kotlin-portlet-archetype-1.0.0-beta.jar</b>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and after execute:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>mvn install:install-file -Dfile=liferay-kotlin-portlet-archetype-1.0.0-beta.jar -DgroupId=atrujillo.liferay.archetypes -DartifactId=liferay-kotlin-portlet-archetype -Dversion=1.0.0-beta -Dpackaging=maven-archetype</b>
 
 This is required one time only, after this you can list and use the local archeypes executing:
 
